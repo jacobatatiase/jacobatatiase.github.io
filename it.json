@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "about": "Chi siamo",
+    "services": "Servizi", 
+    "portfolio": "Portfolio",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Atia",
+    "subtitle": "Rendere AI e Tecnologie Moderne Accessibili alle Aziende Tradizionali in Tutta Europa",
+    "description": "Dai caffè ai servizi di pulizia, aiutiamo le aziende tradizionali in tutta Europa a scoprire come AI e app moderne possono ridurre gli sprechi, aumentare l'efficienza e deliziare i clienti—senza la complessità o i costi che vi aspettereste.",
+    "description2": "Che gestiate un caffè, ristorante, studio benessere o azienda di servizi ovunque in Europa, rendiamo la tecnologia moderna semplice, accessibile e genuinamente utile per le vostre operazioni quotidiane.",
+    "cta_services": "I Nostri Servizi",
+    "cta_portfolio": "Visualizza Portfolio"
+  },
+  "about": {
+    "title": "Chi è Atia",
+    "description": "In Atia, ci specializziamo nell'aiutare le aziende tradizionali in tutta Europa—caffè, ristoranti, servizi di pulizia, studi benessere e aziende di servizi—a sfruttare il potere della tecnologia moderna. Traduciamo AI complessa e sviluppo app in soluzioni semplici e pratiche che risolvono problemi aziendali reali per clienti dalla Svezia all'Italia.",
+    "app_dev": {
+      "title": "Sviluppo App",
+      "description": "Applicazioni moderne e scalabili costruite con le ultime tecnologie e le migliori pratiche."
+    },
+    "ai_solutions": {
+      "title": "Soluzioni AI", 
+      "description": "Sistemi intelligenti che automatizzano i processi e forniscono preziose intuizioni."
+    },
+    "open_source": {
+      "title": "Open Source",
+      "description": "Contribuendo alla comunità globale degli sviluppatori con progetti open source."
+    },
+    "linux_systems": {
+      "title": "Sistemi Linux",
+      "description": "Soluzioni infrastrutturali basate su Linux robuste, sicure ed efficienti."
+    }
+  },
+  "services": {
+    "title": "Come Aiutiamo le Aziende Tradizionali in Tutta Europa",
+    "description": "Facciamo funzionare la tecnologia moderna per la vostra azienda—non serve esperienza tecnica. Dal ridurre gli sprechi nel vostro caffè a Stoccolma al semplificare gli appuntamenti nella vostra clinica a Milano, creiamo soluzioni semplici che offrono risultati reali in tutti i mercati europei.",
+    "mobile_apps": {
+      "title": "App Mobile Personalizzate per la Vostra Azienda",
+      "description": "App semplici e potenti che il vostro team e i vostri clienti useranno davvero. Dal coordinamento del personale alla prenotazione clienti, costruiamo soluzioni mobile che rendono le vostre operazioni quotidiane più fluide.",
+      "badges": ["Facili da Usare", "App per Staff e Clienti", "Impatto Aziendale Reale"]
+    },
+    "web_apps": {
+      "title": "Strumenti Aziendali Basati su Web", 
+      "description": "Strumenti web semplici che funzionano perfettamente con le vostre app mobile. Date al vostro team dashboard per monitorare le prestazioni, permettete ai clienti di prenotare online o gestite l'inventario—tutto da qualsiasi browser web.",
+      "badges": ["Accesso Dashboard Facile", "Prenotazione Online", "Coordinamento Team"]
+    },
+    "ai_powered": {
+      "title": "AI Intelligente che Aiuta Davvero",
+      "description": "L'AI non deve essere complicata. Aggiungiamo funzionalità intelligenti che risolvono problemi reali—come prevedere i periodi di punta nel vostro ristorante o riordinare automaticamente le forniture per il vostro servizio di pulizia.",
+      "badges": ["AI Pratica", "Riduzione Sprechi", "Operazioni Più Intelligenti"]
+    },
+    "backend": {
+      "title": "Sistemi Affidabili che Funzionano e Basta",
+      "description": "Tutta la tecnologia dietro le quinte che fa funzionare le vostre app senza problemi. Non dovrete mai pensare a server o database—gestiamo tutto noi così potete concentrarvi sulla vostra azienda.",
+      "badges": ["Sempre Affidabile", "Dati Sicuri", "Zero Downtime"]
+    },
+    "open_source_solutions": {
+      "title": "Soluzioni Open Source",
+      "description": "La nostra esperienza nelle tecnologie open source ci consente di fornire soluzioni di alta qualità e costo-efficaci evitando il vendor lock-in per la vostra azienda.",
+      "badges": ["Nessun Vendor Lock-in", "Economico", "Pronto per l'Azienda"]
+    },
+    "managed_ops": {
+      "title": "Operazioni Gestite",
+      "description": "Gestiamo tutto l'hosting e le operazioni in modo trasparente. Le vostre applicazioni funzionano semplicemente, in modo affidabile e sicuro, senza che voi dobbiate preoccuparvi dei dettagli tecnici.",
+      "badges": ["Zero Downtime", "Hosting Trasparente", "Monitoraggio 24/7"]
+    }
+  },
+  "portfolio": {
+    "title": "Storie di Successo Reali da Aziende Tradizionali",
+    "description": "Vedete come caffè, servizi di pulizia, studi benessere e altre aziende tradizionali hanno ridotto gli sprechi, aumentato l'efficienza e deliziato i clienti usando le nostre semplici soluzioni tecnologiche.",
+    "cafe": {
+      "title": "App Operazioni Piccolo Caffè",
+      "description": "Un piccolo caffè con tre sedi stava lottando con il 35% di spreco alimentare e operazioni inconsistenti tra i loro negozi. La nostra app mobile per manager combinata con previsioni della domanda alimentate dall'AI ha ridotto lo spreco alimentare del 25% e standardizzato le operazioni. L'AI ha imparato i modelli unici di ogni sede e le preferenze dei clienti, mentre i manager potevano coordinare inventario e staff senza soluzione di continuità tra tutti e tre i caffè.",
+      "badges": ["Piccole Imprese", "Multi-Sede", "Gestione Inventario"]
+    },
+    "yoga": {
+      "title": "Ottimizzazione Programmazione Studio Yoga",
+      "description": "Uno studio yoga stava lottando con classi sotto-prenotate e clienti frustrati che non riuscivano a trovare sessioni che si adattassero ai loro orari e livelli di abilità. La nostra app mobile per studenti combinata con ottimizzazione della programmazione delle classi alimentata dall'AI ha aumentato la partecipazione alle classi del 40% e migliorato la soddisfazione del cliente. L'AI ha imparato le preferenze, disponibilità e progressione delle abilità di ogni studente per suggerire orari e tipi di classe ottimali, mentre l'app ha reso la prenotazione fluida e personalizzata.",
+      "badges": ["Benessere", "Programmazione Classi", "Esperienza Cliente"]
+    },
+    "cleaning": {
+      "title": "Pianificatore Rotte Servizio Pulizie",
+      "description": "Un'azienda di pulizie stava spendendo troppo tempo nei viaggi tra clienti e fornendo qualità di servizio inconsistente. La nostra app mobile per addetti alle pulizie combinata con ottimizzazione delle rotte alimentata dall'AI ha permesso loro di servire il 20% in più di clienti al giorno mantenendo costantemente alta qualità del servizio. L'AI ha imparato i modelli di traffico e le preferenze dei clienti, mentre l'app ha assicurato un coordinamento efficiente tra i membri del team.",
+      "badges": ["Servizi Pulizie", "Ottimizzazione Rotte", "Controllo Qualità"]
+    },
+    "electrician": {
+      "title": "Sistema Dispatch Emergenze Elettricista",
+      "description": "Un'azienda elettrica locale con 3 tecnici stava perdendo clienti di emergenza a causa di tempi di risposta lenti e programmazione inefficiente, mentre i tecnici guidavano miglia eccessive tra lavori. La nostra app mobile per tecnici combinata con dispatch alimentato dall'AI ha ridotto i tempi di risposta alle emergenze del 40% e tagliato la guida giornaliera del 30%. L'AI ha imparato a prioritizzare le chiamate basandosi su urgenza e posizione, mentre i tecnici potevano navigare efficientemente e comunicare senza soluzione di continuità con i clienti.",
+      "badges": ["Servizi Emergenza", "Ottimizzazione Rotte", "Servizio Clienti"]
+    },
+    "fitness": {
+      "title": "Sistema Gestione Studio Fitness",
+      "description": "Uno studio fitness stava perdendo il 20% dei nuovi membri entro tre mesi a causa della mancanza di coinvolgimento e scarsa programmazione delle classi. La nostra app mobile per membri combinata con raccomandazioni di allenamento alimentate dall'AI ha aumentato la ritenzione dei membri del 60% e ottimizzato la programmazione delle classi. L'AI ha imparato le preferenze e gli obiettivi fitness di ogni membro, mentre l'app li ha tenuti motivati e coinvolti con piani di allenamento personalizzati.",
+      "badges": ["Fitness", "Ritenzione Membri", "Personalizzazione"]
+    },
+    "dental": {
+      "title": "Sistema Cura Pazienti Studio Dentistico",
+      "description": "Un piccolo studio dentistico stava sperimentando il 15-20% di mancate presentazioni durante alcuni periodi e lottando per mantenere i programmi di trattamento dei pazienti, impattando sia la salute del paziente che le entrate dello studio. La nostra app mobile per pazienti combinata con ottimizzazione degli appuntamenti alimentata dall'AI e promemoria di trattamento ha ridotto le mancate presentazioni del 50% e migliorato la salute orale dei pazienti. L'AI ha inviato promemoria personalizzati su pulizie e trattamenti, mentre l'app ha reso la programmazione facile e conveniente.",
+      "badges": ["Sanità", "Cura Pazienti", "Gestione Appuntamenti"]
+    }
+  },
+  "contact": {
+    "title": "Mettetevi in Contatto",
+    "description": "Pronti a iniziare il vostro prossimo progetto? Discutiamo di come possiamo aiutarvi a raggiungere i vostri obiettivi tecnologici.",
+    "info_title": "Informazioni di Contatto",
+    "form_title": "Inviateci un Messaggio",
+    "form": {
+      "name": "Nome",
+      "name_placeholder": "Il Vostro Nome",
+      "email": "Email",
+      "email_placeholder": "vostra@email.it",
+      "subject": "Oggetto",
+      "subject_placeholder": "Discussione Progetto",
+      "message": "Messaggio",
+      "message_placeholder": "Parlateci del vostro progetto...",
+      "submit": "Invia Messaggio",
+      "sending": "Invio in corso...",
+      "success": "Messaggio inviato con successo! Vi ricontatteremo presto.",
+      "error_required": " è richiesto",
+      "error_email": "Per favore inserite un indirizzo email valido"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Atia. Tutti i diritti riservati.",
+    "built_with": "Costruito con ❤️ usando DaisyUI e Tailwind CSS"
+  },
+  "ui": {
+    "theme_toggle": "Cambia tema",
+    "language_select": "Seleziona Lingua"
+  }
+}

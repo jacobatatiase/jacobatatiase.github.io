@@ -1,0 +1,223 @@
+/* Custom light theme - force orange color with !important */
+[data-theme="light"] {
+  --p: 234 88 12 !important; /* Tailwind orange-600 - proper orange color */
+  --pf: 194 65 12 !important; /* Tailwind orange-700 - darker for focus */
+  --pc: 255 255 255 !important; /* White text on orange */
+}
+
+/* Orange text for non-button elements */
+[data-theme="light"] .text-primary,
+[data-theme="light"] .navbar .text-primary {
+  --tw-text-opacity: 1 !important;
+  color: rgb(234 88 12) !important;
+}
+
+/* Primary buttons: orange background with WHITE text */
+[data-theme="light"] .btn-primary {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(234 88 12) !important;
+  border-color: rgb(234 88 12) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255) !important; /* White text on orange background */
+}
+
+/* Primary badges: orange background with white text */
+[data-theme="light"] .badge-primary {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(234 88 12) !important;
+  border-color: rgb(234 88 12) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255) !important; /* White text on orange background */
+}
+
+/* Primary badge outline: orange border with orange text */
+[data-theme="light"] .badge-primary.badge-outline {
+  --tw-bg-opacity: 1 !important;
+  background-color: transparent !important;
+  border-color: rgb(234 88 12) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(234 88 12) !important; /* Orange text on transparent background */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--b2));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--p));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--pf));
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hero section gradient enhancement */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    hsla(var(--b2), 0.8) 0%, 
+    hsla(var(--b3), 0.6) 50%, 
+    hsla(var(--p), 0.1) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card hover effects */
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Button enhancements */
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Navigation enhancements */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar a {
+  transition: color 0.2s ease;
+}
+
+/* Form enhancements */
+.form-control label {
+  font-weight: 500;
+}
+
+.input:focus, .textarea:focus {
+  border-color: hsl(var(--p));
+  box-shadow: 0 0 0 3px hsla(var(--p), 0.1);
+}
+
+/* Badge styling */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Footer enhancements */
+.footer {
+  background: linear-gradient(135deg, 
+    hsl(var(--b3)) 0%, 
+    hsl(var(--b2)) 100%);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.125rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar, .footer, #theme-toggle {
+    display: none;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.btn:focus-visible, 
+.input:focus-visible, 
+.textarea:focus-visible,
+.link:focus-visible {
+  outline: 2px solid hsl(var(--p));
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 1px solid hsl(var(--bc));
+  }
+  
+  .btn {
+    border: 2px solid hsl(var(--bc));
+  }
+}

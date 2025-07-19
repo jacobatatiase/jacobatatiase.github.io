@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "services": "Dienstleistungen", 
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Atia",
+    "subtitle": "KI & moderne Technologie für traditionelle Unternehmen in ganz Europa zugänglich machen",
+    "description": "Von Cafés bis zu Reinigungsdiensten helfen wir traditionellen Unternehmen in ganz Europa zu entdecken, wie KI und moderne Apps Verschwendung reduzieren, Effizienz steigern und Kunden begeistern können—ohne die erwartete Komplexität oder Kosten.",
+    "description2": "Ob Sie ein Café, Restaurant, Wellness-Studio oder Dienstleistungsunternehmen irgendwo in Europa führen, wir machen moderne Technologie einfach, erschwinglich und wirklich nützlich für Ihre täglichen Abläufe.",
+    "cta_services": "Unsere Dienstleistungen",
+    "cta_portfolio": "Portfolio ansehen"
+  },
+  "about": {
+    "title": "Über Atia",
+    "description": "Bei Atia spezialisieren wir uns darauf, traditionellen Unternehmen in ganz Europa—Cafés, Restaurants, Reinigungsdiensten, Wellness-Studios und Dienstleistungsunternehmen—die Macht moderner Technologie zu erschließen. Wir übersetzen komplexe KI und App-Entwicklung in einfache, praktische Lösungen, die echte Geschäftsprobleme für Kunden von Schweden bis Italien lösen.",
+    "app_dev": {
+      "title": "App-Entwicklung",
+      "description": "Moderne, skalierbare Anwendungen, die mit den neuesten Technologien und bewährten Praktiken erstellt wurden."
+    },
+    "ai_solutions": {
+      "title": "KI-Lösungen", 
+      "description": "Intelligente Systeme, die Prozesse automatisieren und wertvolle Erkenntnisse liefern."
+    },
+    "open_source": {
+      "title": "Open Source",
+      "description": "Beiträge zur globalen Entwicklergemeinschaft mit Open-Source-Projekten."
+    },
+    "linux_systems": {
+      "title": "Linux-Systeme",
+      "description": "Robuste, sichere und effiziente Linux-basierte Infrastrukturlösungen."
+    }
+  },
+  "services": {
+    "title": "Wie wir traditionellen Unternehmen in ganz Europa helfen",
+    "description": "Wir machen moderne Technologie für Ihr Unternehmen arbeiten—kein technischer Hintergrund erforderlich. Von der Reduzierung von Verschwendung in Ihrem Café in Stockholm bis zur Rationalisierung von Terminen in Ihrer Praxis in Mailand schaffen wir einfache Lösungen, die echte Ergebnisse in allen europäischen Märkten liefern.",
+    "mobile_apps": {
+      "title": "Maßgeschneiderte Mobile Apps für Ihr Unternehmen",
+      "description": "Einfache, leistungsstarke Apps, die Ihr Team und Ihre Kunden tatsächlich nutzen werden. Von Mitarbeiterkoordination bis Kundenbuchung erstellen wir mobile Lösungen, die Ihre täglichen Abläufe reibungsloser machen.",
+      "badges": ["Einfach zu nutzen", "Mitarbeiter & Kunden Apps", "Echter Geschäftsnutzen"]
+    },
+    "web_apps": {
+      "title": "Webbasierte Geschäftstools", 
+      "description": "Einfache Web-Tools, die perfekt mit Ihren mobilen Apps funktionieren. Geben Sie Ihrem Team Dashboards zur Leistungsverfolgung, lassen Sie Kunden online buchen oder verwalten Sie Inventar—alles von jedem Webbrowser aus.",
+      "badges": ["Einfacher Dashboard-Zugang", "Online-Buchung", "Team-Koordination"]
+    },
+    "ai_powered": {
+      "title": "Intelligente KI, die wirklich hilft",
+      "description": "KI muss nicht kompliziert sein. Wir fügen intelligente Funktionen hinzu, die echte Probleme lösen—wie die Vorhersage von Stoßzeiten in Ihrem Restaurant oder die automatische Nachbestellung von Vorräten für Ihren Reinigungsservice.",
+      "badges": ["Praktische KI", "Verschwendungsreduzierung", "Intelligentere Abläufe"]
+    },
+    "backend": {
+      "title": "Zuverlässige Systeme, die einfach funktionieren",
+      "description": "All die Hintergrundtechnologie, die Ihre Apps reibungslos laufen lässt. Sie müssen niemals über Server oder Datenbanken nachdenken—wir kümmern uns um alles, damit Sie sich auf Ihr Geschäft konzentrieren können.",
+      "badges": ["Immer zuverlässig", "Sichere Daten", "Keine Ausfallzeiten"]
+    },
+    "open_source_solutions": {
+      "title": "Open Source-Lösungen",
+      "description": "Unsere Expertise in Open-Source-Technologien ermöglicht es uns, hochwertige, kosteneffiziente Lösungen zu liefern und gleichzeitig Vendor-Lock-in für Ihr Unternehmen zu vermeiden.",
+      "badges": ["Kein Vendor-Lock-in", "Kosteneffizient", "Unternehmenstauglich"]
+    },
+    "managed_ops": {
+      "title": "Verwalteter Betrieb",
+      "description": "Wir übernehmen transparent das gesamte Hosting und den Betrieb. Ihre Anwendungen funktionieren einfach, zuverlässig und sicher, ohne dass Sie sich um technische Details kümmern müssen.",
+      "badges": ["Null Ausfallzeit", "Transparentes Hosting", "24/7 Überwachung"]
+    }
+  },
+  "portfolio": {
+    "title": "Echte Erfolgsgeschichten von traditionellen Unternehmen",
+    "description": "Sehen Sie, wie Cafés, Reinigungsdienste, Wellness-Studios und andere traditionelle Unternehmen Verschwendung reduziert, Effizienz gesteigert und Kunden begeistert haben mit unseren einfachen Technologielösungen.",
+    "cafe": {
+      "title": "Kleines Café Operations App",
+      "description": "Ein kleines Café mit drei Standorten kämpfte mit 35% Lebensmittelverschwendung und inkonsistenten Abläufen in ihren Filialen. Unsere mobile App für Manager in Kombination mit KI-gestützter Nachfrageprognose reduzierte die Lebensmittelverschwendung um 25% und standardisierte die Abläufe. Die KI lernte die einzigartigen Muster und Kundenpräferenzen jedes Standorts, während Manager Inventar und Personal nahtlos über alle drei Cafés koordinieren konnten.",
+      "badges": ["Kleinunternehmen", "Mehrere Standorte", "Inventarmanagement"]
+    },
+    "yoga": {
+      "title": "Yoga-Studio Terminplanungsoptimierung",
+      "description": "Ein Yoga-Studio kämpfte mit unterbelegten Kursen und frustrierten Kunden, die keine Sitzungen finden konnten, die zu ihren Zeitplänen und Fähigkeitsniveaus passten. Unsere mobile App für Studenten in Kombination mit KI-gestützter Kursterminplanungsoptimierung erhöhte die Kursteilnahme um 40% und verbesserte die Kundenzufriedenheit. Die KI lernte die Präferenzen, Verfügbarkeit und Fähigkeitsentwicklung jedes Studenten, um optimale Kurszeiten und -typen vorzuschlagen, während die App die Buchung nahtlos und personalisiert machte.",
+      "badges": ["Wellness", "Kursterminplanung", "Kundenerfahrung"]
+    },
+    "cleaning": {
+      "title": "Reinigungsdienst Routenplaner",
+      "description": "Ein Reinigungsunternehmen verbrachte zu viel Zeit mit Fahrten zwischen Kunden und lieferte inkonsistente Servicequalität. Unsere mobile App für Reinigungskräfte in Kombination mit KI-gestützter Routenoptimierung ermöglichte es ihnen, 20% mehr Kunden pro Tag zu bedienen und gleichzeitig konstant hohe Servicequalität zu halten. Die KI lernte Verkehrsmuster und Kundenpräferenzen, während die App eine effiziente Koordination zwischen Teammitgliedern sicherstellte.",
+      "badges": ["Reinigungsdienste", "Routenoptimierung", "Qualitätskontrolle"]
+    },
+    "electrician": {
+      "title": "Elektriker Notfall-Dispatch-System",
+      "description": "Ein örtliches Elektrikerunternehmen mit 3 Technikern verlor Notfallkunden aufgrund langsamer Reaktionszeiten und ineffizienter Terminplanung, während Techniker übermäßige Strecken zwischen Jobs fuhren. Unsere mobile App für Techniker in Kombination mit KI-gestütztem Dispatch reduzierte Notfall-Reaktionszeiten um 40% und verringerte das tägliche Fahren um 30%. Die KI lernte, Anrufe basierend auf Dringlichkeit und Standort zu priorisieren, während Techniker effizient navigieren und nahtlos mit Kunden kommunizieren konnten.",
+      "badges": ["Notfalldienste", "Routenoptimierung", "Kundenservice"]
+    },
+    "fitness": {
+      "title": "Fitnessstudio Verwaltungssystem",
+      "description": "Ein Fitnessstudio verlor 20% der neuen Mitglieder innerhalb von drei Monaten aufgrund mangelnder Beteiligung und schlechter Kursterminplanung. Unsere mobile App für Mitglieder in Kombination mit KI-gestützten Trainingsempfehlungen erhöhte die Mitgliederbindung um 60% und optimierte die Kursterminplanung. Die KI lernte die Präferenzen und Fitnessziele jedes Mitglieds, während die App sie mit personalisierten Trainingsplänen motiviert und engagiert hielt.",
+      "badges": ["Fitness", "Mitgliederbindung", "Personalisierung"]
+    },
+    "dental": {
+      "title": "Zahnarztpraxis Patientenversorgungssystem",
+      "description": "Eine kleine Zahnarztpraxis erlebte während einiger Perioden 15-20% Nichterscheinen und kämpfte damit, Patientenbehandlungspläne einzuhalten, was sowohl die Patientengesundheit als auch die Praxiseinnahmen beeinträchtigte. Unsere mobile App für Patienten in Kombination mit KI-gestützter Terminoptimierung und Behandlungserinnerungen reduzierte das Nichterscheinen um 50% und verbesserte die Mundgesundheit der Patienten. Die KI sendete personalisierte Erinnerungen über Reinigungen und Behandlungen, während die App die Terminplanung einfach und bequem machte.",
+      "badges": ["Gesundheitswesen", "Patientenversorgung", "Terminmanagement"]
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Bereit, Ihr nächstes Projekt zu starten? Lassen Sie uns besprechen, wie wir Ihnen helfen können, Ihre Technologieziele zu erreichen.",
+    "info_title": "Kontaktinformationen",
+    "form_title": "Senden Sie uns eine Nachricht",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Ihr Name",
+      "email": "E-Mail",
+      "email_placeholder": "ihre@email.de",
+      "subject": "Betreff",
+      "subject_placeholder": "Projektdiskussion",
+      "message": "Nachricht",
+      "message_placeholder": "Erzählen Sie uns von Ihrem Projekt...",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.",
+      "error_required": " ist erforderlich",
+      "error_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Atia. Alle Rechte vorbehalten.",
+    "built_with": "Erstellt mit ❤️ mit DaisyUI und Tailwind CSS"
+  },
+  "ui": {
+    "theme_toggle": "Design wechseln",
+    "language_select": "Sprache auswählen"
+  }
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atia - App Development, AI & Open Source Solutions</title>
+    <meta name="description" content="Atia specializes in modern app development, AI solutions, open source projects, and Linux systems.">
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-base-100 text-base-content transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="navbar bg-base-100 shadow-sm sticky top-0 z-50 backdrop-blur-lg bg-opacity-90">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#about" class="text-base-content hover:text-primary" data-i18n="nav.about">About</a></li>
+                    <li><a href="#services" class="text-base-content hover:text-primary" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#portfolio" class="text-base-content hover:text-primary" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="#contact" class="text-base-content hover:text-primary" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+            <a href="#" class="btn btn-ghost text-xl font-bold text-primary">Atia</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 space-x-2">
+                <li><a href="#about" class="text-base-content hover:text-primary transition-colors" data-i18n="nav.about">About</a></li>
+                <li><a href="#services" class="text-base-content hover:text-primary transition-colors" data-i18n="nav.services">Services</a></li>
+                <li><a href="#portfolio" class="text-base-content hover:text-primary transition-colors" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="text-base-content hover:text-primary transition-colors" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <!-- Language Dropdown -->
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle" data-i18n-title="ui.language_select" title="Select Language" id="language-toggle">
+                    <span class="text-sm" id="current-language">🇬🇧</span>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box w-48 p-2 shadow-lg z-50">
+                    <li><a data-lang="en" class="language-option">🇬🇧 English</a></li>
+                    <li><a data-lang="de" class="language-option">🇩🇪 Deutsch</a></li>
+                    <li><a data-lang="it" class="language-option">🇮🇹 Italiano</a></li>
+                    <li><a data-lang="sv" class="language-option">🇸🇪 Svenska</a></li>
+                </ul>
+            </div>
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="btn btn-ghost btn-circle" data-i18n-title="ui.theme_toggle" title="Toggle theme">
+                <i class="fas fa-moon text-xl" id="theme-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen bg-gradient-to-br from-base-200 to-base-300">
+        <div class="hero-content text-center">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-primary" data-i18n="hero.title">
+                    Atia
+                </h1>
+                <p class="text-xl md:text-2xl mb-6 text-base-content/80 leading-relaxed" data-i18n="hero.subtitle">
+                    Making AI & Modern Technology Accessible for Traditional Businesses Across Europe
+                </p>
+                <p class="text-lg mb-8 text-base-content/70 max-w-3xl mx-auto leading-relaxed" data-i18n="hero.description">
+                    From coffee shops to cleaning services, we help traditional businesses across Europe discover how AI and modern apps can reduce waste, boost efficiency, and delight customers—without the complexity or cost you'd expect.
+                </p>
+                <p class="text-lg mb-12 text-base-content/70 max-w-2xl mx-auto" data-i18n="hero.description2">
+                    Whether you run a café, restaurant, wellness studio, or service company anywhere in Europe, we make modern technology simple, affordable, and genuinely useful for your daily operations.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="btn btn-primary btn-lg" data-i18n="hero.cta_services">Our Services</a>
+                    <a href="#portfolio" class="btn btn-outline btn-lg" data-i18n="hero.cta_portfolio">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8 text-primary" data-i18n="about.title">About Atia</h2>
+                <p class="text-lg mb-12 text-base-content/80 leading-relaxed" data-i18n="about.description">
+                    At Atia, we specialize in helping traditional businesses across Europe—cafés, restaurants, cleaning services, wellness studios, and service companies—harness the power of modern technology. We translate complex AI and app development into simple, practical solutions that solve real business problems for clients from Sweden to Italy.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card bg-base-200 shadow-lg">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt text-4xl text-primary mb-4"></i>
+                            <h3 class="card-title justify-center text-xl mb-2" data-i18n="about.app_dev.title">App Development</h3>
+                            <p class="text-base-content/70" data-i18n="about.app_dev.description">Modern, scalable applications built with the latest technologies and best practices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-base-200 shadow-lg">
+                        <div class="card-body text-center">
+                            <i class="fas fa-brain text-4xl text-primary mb-4"></i>
+                            <h3 class="card-title justify-center text-xl mb-2" data-i18n="about.ai_solutions.title">AI Solutions</h3>
+                            <p class="text-base-content/70" data-i18n="about.ai_solutions.description">Intelligent systems that automate processes and provide valuable insights.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-base-200 shadow-lg">
+                        <div class="card-body text-center">
+                            <i class="fas fa-code-branch text-4xl text-primary mb-4"></i>
+                            <h3 class="card-title justify-center text-xl mb-2" data-i18n="about.open_source.title">Open Source</h3>
+                            <p class="text-base-content/70" data-i18n="about.open_source.description">Contributing to the global developer community with open source projects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-base-200 shadow-lg">
+                        <div class="card-body text-center">
+                            <i class="fab fa-linux text-4xl text-primary mb-4"></i>
+                            <h3 class="card-title justify-center text-xl mb-2" data-i18n="about.linux_systems.title">Linux Systems</h3>
+                            <p class="text-base-content/70" data-i18n="about.linux_systems.description">Robust, secure, and efficient Linux-based infrastructure solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-primary" data-i18n="services.title">How We Help Traditional Businesses Across Europe</h2>
+                <p class="text-lg text-base-content/80 max-w-3xl mx-auto" data-i18n="services.description">
+                    We make modern technology work for your business—no tech background required. From reducing waste in your café in Stockholm to streamlining appointments at your clinic in Milan, we create simple solutions that deliver real results across all European markets.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-mobile-alt text-3xl text-primary mr-4"></i>
+                            <h3 class="card-title text-xl" data-i18n="services.mobile_apps.title">Custom Mobile Apps for Your Business</h3>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="services.mobile_apps.description">
+                            Simple, powerful apps that your team and customers will actually use. From staff coordination to customer booking, we build mobile solutions that make your daily operations smoother.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="services.mobile_apps.badges.0">Easy to Use</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.mobile_apps.badges.1">Staff & Customer Apps</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.mobile_apps.badges.2">Real Business Impact</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-desktop text-3xl text-primary mr-4"></i>
+                            <h3 class="card-title text-xl" data-i18n="services.web_apps.title">Web-Based Business Tools</h3>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="services.web_apps.description">
+                            Simple web tools that work perfectly with your mobile apps. Give your team dashboards to track performance, let customers book online, or manage inventory—all from any web browser.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="services.web_apps.badges.0">Easy Dashboard Access</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.web_apps.badges.1">Online Booking</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.web_apps.badges.2">Team Coordination</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-robot text-3xl text-primary mr-4"></i>
+                            <h3 class="card-title text-xl" data-i18n="services.ai_powered.title">Smart AI That Actually Helps</h3>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="services.ai_powered.description">
+                            AI doesn't have to be complicated. We add smart features that solve real problems—like predicting busy periods at your restaurant or automatically reordering supplies for your cleaning service.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="services.ai_powered.badges.0">Practical AI</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.ai_powered.badges.1">Waste Reduction</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.ai_powered.badges.2">Smarter Operations</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-server text-3xl text-primary mr-4"></i>
+                            <h3 class="card-title text-xl" data-i18n="services.backend.title">Reliable Systems That Just Work</h3>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="services.backend.description">
+                            All the behind-the-scenes technology that makes your apps run smoothly. You'll never need to think about servers or databases—we handle everything so you can focus on your business.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="services.backend.badges.0">Always Reliable</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.backend.badges.1">Secure Data</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.backend.badges.2">No Downtime</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-code text-3xl text-primary mr-4"></i>
+                            <h3 class="card-title text-xl" data-i18n="services.open_source_solutions.title">Open Source Solutions</h3>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="services.open_source_solutions.description">
+                            Our expertise in open source technologies enables us to deliver high-quality, cost-effective solutions while avoiding vendor lock-in for your business.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="services.open_source_solutions.badges.0">No Vendor Lock-in</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.open_source_solutions.badges.1">Cost Effective</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.open_source_solutions.badges.2">Enterprise Ready</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="card-body">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-server text-3xl text-primary mr-4"></i>
+                            <h3 class="card-title text-xl" data-i18n="services.managed_ops.title">Managed Operations</h3>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="services.managed_ops.description">
+                            We handle all hosting and operations transparently. Your applications just work, reliably and securely, without you worrying about the technical details.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="services.managed_ops.badges.0">Zero Downtime</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.managed_ops.badges.1">Transparent Hosting</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="services.managed_ops.badges.2">24/7 Monitoring</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body p-8 lg:p-12">
+                        <h2 class="text-4xl font-bold mb-6 text-primary" data-i18n="pricing.title">Custom Apps Without the Custom Price Tag</h2>
+                        <p class="text-xl mb-8 text-base-content/80 leading-relaxed" data-i18n="pricing.description">
+                            We believe every small business deserves custom technology. That's why our AI-powered mobile apps start at just €500-1000 - not the €10,000+ traditionally charged by agencies.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-base-200 rounded-lg p-6">
+                                <div class="text-3xl font-bold text-primary mb-2" data-i18n="pricing.simple.price">€500+</div>
+                                <div class="text-lg font-semibold mb-2" data-i18n="pricing.simple.title">Simple Applications</div>
+                                <p class="text-base-content/70" data-i18n="pricing.simple.description">Basic mobile apps with core functionality</p>
+                            </div>
+                            <div class="bg-base-200 rounded-lg p-6">
+                                <div class="text-3xl font-bold text-primary mb-2" data-i18n="pricing.ai.price">€900-1000</div>
+                                <div class="text-lg font-semibold mb-2" data-i18n="pricing.ai.title">AI-Powered Solutions</div>
+                                <p class="text-base-content/70" data-i18n="pricing.ai.description">Custom apps with intelligent features and automation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-base-200 rounded-lg p-6 border-l-4 border-primary">
+                            <div class="flex items-start">
+                                <i class="fas fa-heart text-primary text-lg mr-3 mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-base-content mb-2" data-i18n="pricing.nonprofit.title">Special Pricing for Non-Profits</h3>
+                                    <div class="text-sm text-base-content/80" data-i18n="pricing.nonprofit.description">We offer significantly reduced rates for non-profit organizations creating positive impact in their communities.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-base-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-primary" data-i18n="portfolio.title">Real Success Stories from Traditional Businesses</h2>
+                <p class="text-lg text-base-content/80 max-w-3xl mx-auto" data-i18n="portfolio.description">
+                    See how cafés, cleaning services, wellness studios, and other traditional businesses have reduced waste, increased efficiency, and delighted customers using our simple technology solutions.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="card-title text-xl" data-i18n="portfolio.cafe.title">Small Café Operations App</h3>
+                            <i class="fas fa-coffee text-2xl text-primary"></i>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="portfolio.cafe.description">
+                            A small café with three locations was struggling with 35% food waste and inconsistent operations across their shops. Our mobile app for managers combined with AI-powered demand forecasting reduced food waste by 25% and standardized operations. The AI learned each location's unique patterns and customer preferences, while managers could coordinate inventory and staff seamlessly across all three cafés.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.cafe.badges.0">Small Business</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.cafe.badges.1">Multi-Location</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.cafe.badges.2">Inventory Management</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="card-title text-xl" data-i18n="portfolio.yoga.title">Yoga Studio Scheduling Optimization</h3>
+                            <i class="fas fa-om text-2xl text-primary"></i>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="portfolio.yoga.description">
+                            A yoga studio was struggling with underbooked classes and frustrated clients who couldn't find sessions that fit their schedules and skill levels. Our mobile app for students combined with AI-powered class scheduling optimization increased class attendance by 40% and improved client satisfaction. The AI learned each student's preferences, availability, and skill progression to suggest optimal class times and types, while the app made booking seamless and personalized.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.yoga.badges.0">Wellness</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.yoga.badges.1">Class Scheduling</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.yoga.badges.2">Client Experience</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="card-title text-xl" data-i18n="portfolio.cleaning.title">Cleaning Service Route Planner</h3>
+                            <i class="fas fa-route text-2xl text-primary"></i>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="portfolio.cleaning.description">
+                            A cleaning company was spending too much time on travel between clients and delivering inconsistent service quality. Our mobile app for cleaners combined with AI-powered route optimization enabled them to serve 20% more clients per day while maintaining consistently high service quality. The AI learned traffic patterns and client preferences, while the app ensured efficient coordination between team members.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.cleaning.badges.0">Cleaning Services</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.cleaning.badges.1">Route Optimization</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.cleaning.badges.2">Quality Control</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="card-title text-xl" data-i18n="portfolio.electrician.title">Electrician Emergency Dispatch System</h3>
+                            <i class="fas fa-bolt text-2xl text-primary"></i>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="portfolio.electrician.description">
+                            A local electrician business with 3 technicians was losing emergency customers due to slow response times and inefficient scheduling, while technicians were driving excessive miles between jobs. Our mobile app for technicians combined with AI-powered dispatch reduced emergency response times by 40% and cut daily driving by 30%. The AI learned to prioritize calls based on urgency and location, while technicians could navigate efficiently and communicate seamlessly with customers.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.electrician.badges.0">Emergency Services</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.electrician.badges.1">Route Optimization</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.electrician.badges.2">Customer Service</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="card-title text-xl" data-i18n="portfolio.fitness.title">Fitness Studio Management System</h3>
+                            <i class="fas fa-dumbbell text-2xl text-primary"></i>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="portfolio.fitness.description">
+                            A fitness studio was losing 20% of new members within three months due to lack of engagement and poor class scheduling. Our mobile app for members combined with AI-powered workout recommendations increased member retention by 60% and optimized class scheduling. The AI learned each member's preferences and fitness goals, while the app kept them motivated and engaged with personalized workout plans.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.fitness.badges.0">Fitness</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.fitness.badges.1">Member Retention</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.fitness.badges.2">Personalization</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="card-title text-xl" data-i18n="portfolio.dental.title">Dental Practice Patient Care System</h3>
+                            <i class="fas fa-tooth text-2xl text-primary"></i>
+                        </div>
+                        <p class="text-base-content/70 mb-4" data-i18n="portfolio.dental.description">
+                            A small dental office was experiencing 15-20% no-shows during some periods and struggling to maintain patient treatment schedules, impacting both patient health and practice revenue. Our mobile app for patients combined with AI-powered appointment optimization and treatment reminders reduced no-shows by 50% and improved patient oral health. The AI sent personalized reminders about cleanings and treatments, while the app made scheduling easy and convenient.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.dental.badges.0">Healthcare</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.dental.badges.1">Patient Care</div>
+                            <div class="badge badge-primary badge-outline" data-i18n="portfolio.dental.badges.2">Appointment Management</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-base-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-8 text-primary" data-i18n="contact.title">Get In Touch</h2>
+                <p class="text-lg text-base-content/80 max-w-3xl mx-auto" data-i18n="contact.description">
+                    Ready to start your next project? Let's discuss how we can help you achieve your technology goals.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="space-y-8">
+                    <div class="card bg-base-100 shadow-lg">
+                        <div class="card-body">
+                            <h3 class="card-title text-2xl mb-6" data-i18n="contact.info_title">Contact Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-primary text-xl w-8"></i>
+                                    <span class="text-base-content/80">info@atia.se</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl w-8"></i>
+                                    <span class="text-base-content/80">Lund, Sweden</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl mb-6" data-i18n="contact.form_title">Send us a Message</h3>
+                        
+                        <form id="contact-form" action="https://formspree.io/f/xpwlwvva" method="POST" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text" data-i18n="contact.form.name">Name</span>
+                                    </label>
+                                    <input type="text" name="name" data-i18n-placeholder="contact.form.name_placeholder" placeholder="Your Name" class="input input-bordered" required>
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text" data-i18n="contact.form.email">Email</span>
+                                    </label>
+                                    <input type="email" name="email" data-i18n-placeholder="contact.form.email_placeholder" placeholder="your@email.com" class="input input-bordered" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text" data-i18n="contact.form.subject">Subject</span>
+                                </label>
+                                <input type="text" name="subject" data-i18n-placeholder="contact.form.subject_placeholder" placeholder="Project Discussion" class="input input-bordered" required>
+                            </div>
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text" data-i18n="contact.form.message">Message</span>
+                                </label>
+                                <textarea name="message" class="textarea textarea-bordered h-32" data-i18n-placeholder="contact.form.message_placeholder" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            
+                            <!-- Hidden field to track language -->
+                            <input type="hidden" name="_language" id="form-language" value="en">
+                            
+                            <div class="form-control">
+                                <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-300 text-base-content">
+        <div class="grid grid-flow-col gap-4">
+            <a href="#about" class="link link-hover" data-i18n="nav.about">About</a>
+            <a href="#services" class="link link-hover" data-i18n="nav.services">Services</a>
+            <a href="#portfolio" class="link link-hover" data-i18n="nav.portfolio">Portfolio</a>
+            <a href="#contact" class="link link-hover" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div>
+            <p data-i18n="footer.copyright">&copy; 2025 Atia. All rights reserved.</p>
+            <p class="text-sm opacity-70" data-i18n="footer.built_with">Built with ❤️ using DaisyUI and Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

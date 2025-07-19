@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services", 
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Atia",
+    "subtitle": "Making AI & Modern Technology Accessible for Traditional Businesses Across Europe",
+    "description": "From coffee shops to cleaning services, we help traditional businesses across Europe discover how AI and modern apps can reduce waste, boost efficiency, and delight customers—without the complexity or cost you'd expect.",
+    "description2": "Whether you run a café, restaurant, wellness studio, or service company anywhere in Europe, we make modern technology simple, affordable, and genuinely useful for your daily operations.",
+    "cta_services": "Our Services",
+    "cta_portfolio": "View Portfolio"
+  },
+  "about": {
+    "title": "About Atia",
+    "description": "At Atia, we specialize in helping traditional businesses across Europe—cafés, restaurants, cleaning services, wellness studios, and service companies—harness the power of modern technology. We translate complex AI and app development into simple, practical solutions that solve real business problems for clients from Sweden to Italy.",
+    "app_dev": {
+      "title": "App Development",
+      "description": "Modern, scalable applications built with the latest technologies and best practices."
+    },
+    "ai_solutions": {
+      "title": "AI Solutions", 
+      "description": "Intelligent systems that automate processes and provide valuable insights."
+    },
+    "open_source": {
+      "title": "Open Source",
+      "description": "Contributing to the global developer community with open source projects."
+    },
+    "linux_systems": {
+      "title": "Linux Systems",
+      "description": "Robust, secure, and efficient Linux-based infrastructure solutions."
+    }
+  },
+  "services": {
+    "title": "How We Help Traditional Businesses Across Europe",
+    "description": "We make modern technology work for your business—no tech background required. From reducing waste in your café in Stockholm to streamlining appointments at your clinic in Milan, we create simple solutions that deliver real results across all European markets.",
+    "mobile_apps": {
+      "title": "Custom Mobile Apps for Your Business",
+      "description": "Simple, powerful apps that your team and customers will actually use. From staff coordination to customer booking, we build mobile solutions that make your daily operations smoother.",
+      "badges": ["Easy to Use", "Staff & Customer Apps", "Real Business Impact"]
+    },
+    "web_apps": {
+      "title": "Web-Based Business Tools", 
+      "description": "Simple web tools that work perfectly with your mobile apps. Give your team dashboards to track performance, let customers book online, or manage inventory—all from any web browser.",
+      "badges": ["Easy Dashboard Access", "Online Booking", "Team Coordination"]
+    },
+    "ai_powered": {
+      "title": "Smart AI That Actually Helps",
+      "description": "AI doesn't have to be complicated. We add smart features that solve real problems—like predicting busy periods at your restaurant or automatically reordering supplies for your cleaning service.",
+      "badges": ["Practical AI", "Waste Reduction", "Smarter Operations"]
+    },
+    "backend": {
+      "title": "Reliable Systems That Just Work",
+      "description": "All the behind-the-scenes technology that makes your apps run smoothly. You'll never need to think about servers or databases—we handle everything so you can focus on your business.",
+      "badges": ["Always Reliable", "Secure Data", "No Downtime"]
+    },
+    "open_source_solutions": {
+      "title": "Open Source Solutions",
+      "description": "Our expertise in open source technologies enables us to deliver high-quality, cost-effective solutions while avoiding vendor lock-in for your business.",
+      "badges": ["No Vendor Lock-in", "Cost Effective", "Enterprise Ready"]
+    },
+    "managed_ops": {
+      "title": "Managed Operations",
+      "description": "We handle all hosting and operations transparently. Your applications just work, reliably and securely, without you worrying about the technical details.",
+      "badges": ["Zero Downtime", "Transparent Hosting", "24/7 Monitoring"]
+    }
+  },
+  "pricing": {
+    "title": "Custom Apps Without the Custom Price Tag",
+    "description": "We believe every small business deserves custom technology. That's why our AI-powered mobile apps start at just €500-1000 - not the €10,000+ traditionally charged by agencies.",
+    "simple": {
+      "price": "€500+",
+      "title": "Simple Applications",
+      "description": "Basic mobile apps with core functionality"
+    },
+    "ai": {
+      "price": "€900-1000",
+      "title": "AI-Powered Solutions",
+      "description": "Custom apps with intelligent features and automation"
+    },
+    "nonprofit": {
+      "title": "Special Pricing for Non-Profits",
+      "description": "We offer significantly reduced rates for non-profit organizations creating positive impact in their communities."
+    }
+  },
+  "portfolio": {
+    "title": "Real Success Stories from Traditional Businesses",
+    "description": "See how cafés, cleaning services, wellness studios, and other traditional businesses have reduced waste, increased efficiency, and delighted customers using our simple technology solutions.",
+    "cafe": {
+      "title": "Small Café Operations App",
+      "description": "A small café with three locations was struggling with 35% food waste and inconsistent operations across their shops. Our mobile app for managers combined with AI-powered demand forecasting reduced food waste by 25% and standardized operations. The AI learned each location's unique patterns and customer preferences, while managers could coordinate inventory and staff seamlessly across all three cafés.",
+      "badges": ["Small Business", "Multi-Location", "Inventory Management"]
+    },
+    "yoga": {
+      "title": "Yoga Studio Scheduling Optimization",
+      "description": "A yoga studio was struggling with underbooked classes and frustrated clients who couldn't find sessions that fit their schedules and skill levels. Our mobile app for students combined with AI-powered class scheduling optimization increased class attendance by 40% and improved client satisfaction. The AI learned each student's preferences, availability, and skill progression to suggest optimal class times and types, while the app made booking seamless and personalized.",
+      "badges": ["Wellness", "Class Scheduling", "Client Experience"]
+    },
+    "cleaning": {
+      "title": "Cleaning Service Route Planner",
+      "description": "A cleaning company was spending too much time on travel between clients and delivering inconsistent service quality. Our mobile app for cleaners combined with AI-powered route optimization enabled them to serve 20% more clients per day while maintaining consistently high service quality. The AI learned traffic patterns and client preferences, while the app ensured efficient coordination between team members.",
+      "badges": ["Cleaning Services", "Route Optimization", "Quality Control"]
+    },
+    "electrician": {
+      "title": "Electrician Emergency Dispatch System",
+      "description": "A local electrician business with 3 technicians was losing emergency customers due to slow response times and inefficient scheduling, while technicians were driving excessive miles between jobs. Our mobile app for technicians combined with AI-powered dispatch reduced emergency response times by 40% and cut daily driving by 30%. The AI learned to prioritize calls based on urgency and location, while technicians could navigate efficiently and communicate seamlessly with customers.",
+      "badges": ["Emergency Services", "Route Optimization", "Customer Service"]
+    },
+    "fitness": {
+      "title": "Fitness Studio Management System",
+      "description": "A fitness studio was losing 20% of new members within three months due to lack of engagement and poor class scheduling. Our mobile app for members combined with AI-powered workout recommendations increased member retention by 60% and optimized class scheduling. The AI learned each member's preferences and fitness goals, while the app kept them motivated and engaged with personalized workout plans.",
+      "badges": ["Fitness", "Member Retention", "Personalization"]
+    },
+    "dental": {
+      "title": "Dental Practice Patient Care System",
+      "description": "A small dental office was experiencing 15-20% no-shows during some periods and struggling to maintain patient treatment schedules, impacting both patient health and practice revenue. Our mobile app for patients combined with AI-powered appointment optimization and treatment reminders reduced no-shows by 50% and improved patient oral health. The AI sent personalized reminders about cleanings and treatments, while the app made scheduling easy and convenient.",
+      "badges": ["Healthcare", "Patient Care", "Appointment Management"]
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Ready to start your next project? Let's discuss how we can help you achieve your technology goals.",
+    "info_title": "Contact Information",
+    "form_title": "Send us a Message",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your Name",
+      "email": "Email",
+      "email_placeholder": "your@email.com",
+      "subject": "Subject",
+      "subject_placeholder": "Project Discussion",
+      "message": "Message",
+      "message_placeholder": "Tell us about your project...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error_required": " is required",
+      "error_email": "Please enter a valid email address"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Atia. All rights reserved.",
+    "built_with": "Built with ❤️ using DaisyUI and Tailwind CSS"
+  },
+  "ui": {
+    "theme_toggle": "Toggle theme",
+    "language_select": "Select Language"
+  }
+}
