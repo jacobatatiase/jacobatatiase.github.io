@@ -7,15 +7,15 @@
   },
   "hero": {
     "title": "Atia",
-    "subtitle": "Gör AI & Modern Teknik Tillgänglig för Traditionella Företag i Hela Europa",
-    "description": "Från kaféer till städtjänster hjälper vi traditionella företag i hela Europa att upptäcka hur AI och moderna appar kan minska spill, öka effektiviteten och glädja kunder—utan den komplexitet eller kostnad ni förväntar er.",
-    "description2": "Oavsett om ni driver ett kafé, restaurang, välmåendestudio eller serviceföretag var som helst i Europa gör vi modern teknik enkel, prisvärd och verkligt användbar för era dagliga verksamheter.",
+    "subtitle": "Gör AI & Modern Teknik Tillgänglig för Traditionella Företag Överallt",
+    "description": "Från kaféer till städtjänster hjälper vi traditionella företag att upptäcka hur AI och moderna appar kan minska spill, öka effektiviteten och glädja kunder—utan den komplexitet eller kostnad ni förväntar er.",
+    "description2": "Oavsett om ni driver ett kafé, restaurang, välmåendestudio eller serviceföretag gör vi modern teknik enkel, prisvärd och verkligt användbar för era dagliga verksamheter.",
     "cta_services": "Våra Tjänster",
     "cta_portfolio": "Se Portfolio"
   },
   "about": {
     "title": "Om Atia",
-    "description": "På Atia specialiserar vi oss på att hjälpa traditionella företag i hela Europa—kaféer, restauranger, städtjänster, välmåendestudios och serviceföretag—att utnyttja kraften i modern teknik. Vi översätter komplex AI och apputveckling till enkla, praktiska lösningar som löser verkliga affärsproblem för kunder från Sverige till Italien.",
+    "description": "På Atia specialiserar vi oss på att hjälpa traditionella företag—kaféer, restauranger, städtjänster, välmåendestudios och serviceföretag—att utnyttja kraften i modern teknik. Vi översätter komplex AI och apputveckling till enkla, praktiska lösningar som löser verkliga affärsproblem, med beprövad erfarenhet av att betjäna kunder i hela Europa från Sverige, Tyskland och Italien.",
     "app_dev": {
       "title": "Apputveckling",
       "description": "Moderna, skalbara applikationer byggda med de senaste teknologierna och bästa praxis."
@@ -34,8 +34,8 @@
     }
   },
   "services": {
-    "title": "Hur Vi Hjälper Traditionella Företag i Hela Europa",
-    "description": "Vi får modern teknik att fungera för ert företag—ingen teknisk bakgrund krävs. Från att minska spill på ert kafé i Stockholm till att effektivisera bokningar på er klinik i Milano skapar vi enkla lösningar som levererar verkliga resultat på alla europeiska marknader.",
+    "title": "Hur Vi Hjälper Traditionella Företag",
+    "description": "Vi får modern teknik att fungera för ert företag—ingen teknisk bakgrund krävs. Från att minska spill på kaféer till att effektivisera bokningar på kliniker skapar vi enkla lösningar som levererar verkliga resultat. Vår erfarenhet sträcker sig över kunder i hela Europa, från Sverige, Tyskland och Italien.",
     "mobile_apps": {
       "title": "Skräddarsydda Mobilappar för Ert Företag",
       "description": "Enkla, kraftfulla appar som ert team och era kunder faktiskt kommer att använda. Från personalkoordination till kundbokningar bygger vi mobila lösningar som gör era dagliga verksamheter smidigare.",

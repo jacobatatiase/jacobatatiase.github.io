@@ -7,15 +7,15 @@
   },
   "hero": {
     "title": "Atia",
-    "subtitle": "Making AI & Modern Technology Accessible for Traditional Businesses Across Europe",
-    "description": "From coffee shops to cleaning services, we help traditional businesses across Europe discover how AI and modern apps can reduce waste, boost efficiency, and delight customers—without the complexity or cost you'd expect.",
-    "description2": "Whether you run a café, restaurant, wellness studio, or service company anywhere in Europe, we make modern technology simple, affordable, and genuinely useful for your daily operations.",
+    "subtitle": "Making AI & Modern Technology Accessible for Traditional Businesses Everywhere",
+    "description": "From coffee shops to cleaning services, we help traditional businesses discover how AI and modern apps can reduce waste, boost efficiency, and delight customers—without the complexity or cost you'd expect.",
+    "description2": "Whether you run a café, restaurant, wellness studio, or service company, we make modern technology simple, affordable, and genuinely useful for your daily operations.",
     "cta_services": "Our Services",
     "cta_portfolio": "View Portfolio"
   },
   "about": {
     "title": "About Atia",
-    "description": "At Atia, we specialize in helping traditional businesses across Europe—cafés, restaurants, cleaning services, wellness studios, and service companies—harness the power of modern technology. We translate complex AI and app development into simple, practical solutions that solve real business problems for clients from Sweden to Italy.",
+    "description": "At Atia, we specialize in helping traditional businesses—cafés, restaurants, cleaning services, wellness studios, and service companies—harness the power of modern technology. We translate complex AI and app development into simple, practical solutions that solve real business problems, with proven experience serving clients across Europe from Sweden to Italy.",
     "app_dev": {
       "title": "App Development",
       "description": "Modern, scalable applications built with the latest technologies and best practices."
@@ -34,8 +34,8 @@
     }
   },
   "services": {
-    "title": "How We Help Traditional Businesses Across Europe",
-    "description": "We make modern technology work for your business—no tech background required. From reducing waste in your café in Stockholm to streamlining appointments at your clinic in Milan, we create simple solutions that deliver real results across all European markets.",
+    "title": "How We Help Traditional Businesses",
+    "description": "We make modern technology work for your business—no tech background required. From reducing waste in cafés to streamlining appointments at clinics, we create simple solutions that deliver real results. Our experience spans clients across Europe, from Sweden, Germany and Italy.",
     "mobile_apps": {
       "title": "Custom Mobile Apps for Your Business",
       "description": "Simple, powerful apps that your team and customers will actually use. From staff coordination to customer booking, we build mobile solutions that make your daily operations smoother.",

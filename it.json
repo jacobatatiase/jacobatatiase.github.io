@@ -7,15 +7,15 @@
   },
   "hero": {
     "title": "Atia",
-    "subtitle": "Rendere AI e Tecnologie Moderne Accessibili alle Aziende Tradizionali in Tutta Europa",
-    "description": "Dai caffè ai servizi di pulizia, aiutiamo le aziende tradizionali in tutta Europa a scoprire come AI e app moderne possono ridurre gli sprechi, aumentare l'efficienza e deliziare i clienti—senza la complessità o i costi che vi aspettereste.",
-    "description2": "Che gestiate un caffè, ristorante, studio benessere o azienda di servizi ovunque in Europa, rendiamo la tecnologia moderna semplice, accessibile e genuinamente utile per le vostre operazioni quotidiane.",
+    "subtitle": "Rendere AI e Tecnologie Moderne Accessibili alle Aziende Tradizionali Ovunque",
+    "description": "Dai caffè ai servizi di pulizia, aiutiamo le aziende tradizionali a scoprire come AI e app moderne possono ridurre gli sprechi, aumentare l'efficienza e deliziare i clienti—senza la complessità o i costi che vi aspettereste.",
+    "description2": "Che gestiate un caffè, ristorante, studio benessere o azienda di servizi, rendiamo la tecnologia moderna semplice, accessibile e genuinamente utile per le vostre operazioni quotidiane.",
     "cta_services": "I Nostri Servizi",
     "cta_portfolio": "Visualizza Portfolio"
   },
   "about": {
     "title": "Chi è Atia",
-    "description": "In Atia, ci specializziamo nell'aiutare le aziende tradizionali in tutta Europa—caffè, ristoranti, servizi di pulizia, studi benessere e aziende di servizi—a sfruttare il potere della tecnologia moderna. Traduciamo AI complessa e sviluppo app in soluzioni semplici e pratiche che risolvono problemi aziendali reali per clienti dalla Svezia all'Italia.",
+    "description": "In Atia, ci specializziamo nell'aiutare le aziende tradizionali—caffè, ristoranti, servizi di pulizia, studi benessere e aziende di servizi—a sfruttare il potere della tecnologia moderna. Traduciamo AI complessa e sviluppo app in soluzioni semplici e pratiche che risolvono problemi aziendali reali, con comprovata esperienza nel servire clienti in tutta Europa, da Svezia, Germania e Italia.",
     "app_dev": {
       "title": "Sviluppo App",
       "description": "Applicazioni moderne e scalabili costruite con le ultime tecnologie e le migliori pratiche."
@@ -34,8 +34,8 @@
     }
   },
   "services": {
-    "title": "Come Aiutiamo le Aziende Tradizionali in Tutta Europa",
-    "description": "Facciamo funzionare la tecnologia moderna per la vostra azienda—non serve esperienza tecnica. Dal ridurre gli sprechi nel vostro caffè a Stoccolma al semplificare gli appuntamenti nella vostra clinica a Milano, creiamo soluzioni semplici che offrono risultati reali in tutti i mercati europei.",
+    "title": "Come Aiutiamo le Aziende Tradizionali",
+    "description": "Facciamo funzionare la tecnologia moderna per la vostra azienda—non serve esperienza tecnica. Dal ridurre gli sprechi nei caffè al semplificare gli appuntamenti nelle cliniche, creiamo soluzioni semplici che offrono risultati reali. La nostra esperienza si estende a clienti in tutta Europa, da Svezia, Germania e Italia.",
     "mobile_apps": {
       "title": "App Mobile Personalizzate per la Vostra Azienda",
       "description": "App semplici e potenti che il vostro team e i vostri clienti useranno davvero. Dal coordinamento del personale alla prenotazione clienti, costruiamo soluzioni mobile che rendono le vostre operazioni quotidiane più fluide.",
