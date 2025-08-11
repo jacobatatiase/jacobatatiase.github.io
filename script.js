@@ -5,6 +5,9 @@ class LanguageManager {
         this.languageData = {};
         this.languageToggle = document.getElementById('language-toggle');
         this.currentLanguageIcon = document.getElementById('current-language');
+        this.mobileCurrentLanguageIcon = document.getElementById('mobile-current-language');
+        this.mobileLanguageToggle = document.getElementById('mobile-language-toggle');
+        this.languageDropdown = document.getElementById('language-dropdown');
         this.languageOptions = document.querySelectorAll('.language-option');
         this.flagMap = {
             'en': '🇬🇧',
@@ -38,15 +41,59 @@ class LanguageManager {
     }
 
     bindEvents() {
+        // Desktop language toggle
+        if (this.languageToggle) {
+            this.languageToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleLanguageDropdown();
+            });
+        }
+
+        // Mobile language toggle
+        if (this.mobileLanguageToggle) {
+            this.mobileLanguageToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.showMobileLanguageOptions();
+            });
+        }
+
+        // Language options
         this.languageOptions.forEach(option => {
             option.addEventListener('click', async (e) => {
                 e.preventDefault();
                 const selectedLanguage = e.target.getAttribute('data-lang');
                 await this.switchLanguage(selectedLanguage);
-                // Close dropdown by removing focus
-                this.languageToggle.blur();
+                this.closeLanguageDropdown();
             });
         });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            this.closeLanguageDropdown();
+        });
+    }
+
+    toggleLanguageDropdown() {
+        if (this.languageDropdown) {
+            this.languageDropdown.classList.toggle('show');
+            this.languageDropdown.classList.toggle('hidden');
+        }
+    }
+
+    closeLanguageDropdown() {
+        if (this.languageDropdown) {
+            this.languageDropdown.classList.add('hidden');
+            this.languageDropdown.classList.remove('show');
+        }
+    }
+
+    showMobileLanguageOptions() {
+        // For mobile, we'll cycle through languages
+        const languages = ['en', 'de', 'it', 'sv'];
+        const currentIndex = languages.indexOf(this.currentLanguage);
+        const nextIndex = (currentIndex + 1) % languages.length;
+        const nextLanguage = languages[nextIndex];
+        this.switchLanguage(nextLanguage);
     }
 
     async switchLanguage(language) {
@@ -105,8 +152,12 @@ class LanguageManager {
     }
 
     updateLanguageIcon() {
+        const flag = this.flagMap[this.currentLanguage] || '🌐';
         if (this.currentLanguageIcon) {
-            this.currentLanguageIcon.textContent = this.flagMap[this.currentLanguage] || '🌐';
+            this.currentLanguageIcon.textContent = flag;
+        }
+        if (this.mobileCurrentLanguageIcon) {
+            this.mobileCurrentLanguageIcon.textContent = flag;
         }
     }
 }
@@ -117,17 +168,24 @@ class ThemeManager {
         this.currentTheme = localStorage.getItem('theme') || 'light';
         this.themeToggle = document.getElementById('theme-toggle');
         this.themeIcon = document.getElementById('theme-icon');
+        this.mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        this.mobileThemeIcon = document.getElementById('mobile-theme-icon');
         this.init();
     }
 
     init() {
         this.applyTheme(this.currentTheme);
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        if (this.themeToggle) {
+            this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
+        if (this.mobileThemeToggle) {
+            this.mobileThemeToggle.addEventListener('click', () => this.toggleTheme());
+        }
         this.updateThemeIcon();
     }
 
     toggleTheme() {
-        this.currentTheme = this.currentTheme === 'light' ? 'halloween' : 'light';
+        this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
         this.applyTheme(this.currentTheme);
         this.updateThemeIcon();
         localStorage.setItem('theme', this.currentTheme);
@@ -139,7 +197,12 @@ class ThemeManager {
 
     updateThemeIcon() {
         const icon = this.currentTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-        this.themeIcon.className = `${icon} text-xl`;
+        if (this.themeIcon) {
+            this.themeIcon.className = icon;
+        }
+        if (this.mobileThemeIcon) {
+            this.mobileThemeIcon.className = icon;
+        }
     }
 }
 
@@ -177,7 +240,7 @@ class NavigationManager {
 // Intersection Observer for Animations
 class AnimationManager {
     constructor() {
-        this.animatedElements = document.querySelectorAll('.card, .hero-content');
+        this.animatedElements = document.querySelectorAll('.bg-white, .text-center');
         this.init();
     }
 
@@ -261,6 +324,7 @@ class FormManager {
             // Reset button state
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
+            submitBtn.classList.remove('loading');
         }
     }
 
@@ -376,20 +440,33 @@ class FormManager {
 // Mobile Menu Manager
 class MobileMenuManager {
     constructor() {
-        this.menuToggle = document.querySelector('.navbar .dropdown');
+        this.menuButton = document.getElementById('mobile-menu-button');
+        this.mobileMenu = document.getElementById('mobile-menu');
         this.init();
     }
 
     init() {
-        if (this.menuToggle) {
-            const menuLinks = this.menuToggle.querySelectorAll('a');
+        if (this.menuButton && this.mobileMenu) {
+            this.menuButton.addEventListener('click', () => this.toggleMenu());
+            
+            // Close menu when clicking on links
+            const menuLinks = this.mobileMenu.querySelectorAll('a');
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    // Close mobile menu when link is clicked
-                    this.menuToggle.blur();
+                    this.closeMenu();
                 });
             });
         }
+    }
+
+    toggleMenu() {
+        this.mobileMenu.classList.toggle('show');
+        this.mobileMenu.classList.toggle('hidden');
+    }
+
+    closeMenu() {
+        this.mobileMenu.classList.add('hidden');
+        this.mobileMenu.classList.remove('show');
     }
 }
 
@@ -505,6 +582,28 @@ class AccessibilityManager {
     }
 }
 
+// Navbar Scroll Manager
+class NavbarScrollManager {
+    constructor() {
+        this.navbar = document.getElementById('navbar');
+        this.init();
+    }
+
+    init() {
+        if (this.navbar) {
+            window.addEventListener('scroll', () => this.handleScroll());
+        }
+    }
+
+    handleScroll() {
+        if (window.scrollY > 50) {
+            this.navbar.classList.add('scrolled');
+        } else {
+            this.navbar.classList.remove('scrolled');
+        }
+    }
+}
+
 // Initialize all managers when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize language manager first and make it globally available
@@ -514,6 +613,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new AnimationManager();
     new FormManager();
     new MobileMenuManager();
+    new NavbarScrollManager();
     new PerformanceManager();
     new AccessibilityManager();
 });
