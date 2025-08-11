@@ -165,7 +165,7 @@ class LanguageManager {
 // Theme Management
 class ThemeManager {
     constructor() {
-        this.currentTheme = localStorage.getItem('theme') || 'light';
+        this.currentTheme = localStorage.getItem('theme') || 'dark';
         this.themeToggle = document.getElementById('theme-toggle');
         this.themeIcon = document.getElementById('theme-icon');
         this.mobileThemeToggle = document.getElementById('mobile-theme-toggle');
