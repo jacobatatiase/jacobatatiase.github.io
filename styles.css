@@ -1,7 +1,7 @@
 /* Base Styles for Modern Minimalist Design */
 :root {
-  --primary-900: rgb(17, 24, 39);
-  --primary-800: rgb(31, 41, 55);
+  --primary-900: rgb(68, 56, 47); /* Dark matte tan for light mode */
+  --primary-800: rgb(87, 73, 63); /* Lighter matte tan */
   --primary-600: rgb(75, 85, 99);
   --primary-500: rgb(107, 114, 128);
   --primary-400: rgb(156, 163, 175);
@@ -61,23 +61,36 @@ body {
   max-height: 300px;
 }
 
+/* Light Mode Tan Colors */
+.text-gray-900 {
+  color: rgb(68, 56, 47) !important;
+}
+
+.bg-gray-900 {
+  background-color: rgb(68, 56, 47) !important;
+}
+
+.hover\:bg-gray-800:hover {
+  background-color: rgb(87, 73, 63) !important;
+}
+
 /* Theme Toggle Styles */
 [data-theme="dark"] {
-  background-color: rgb(17, 24, 39);
+  background-color: rgb(0, 0, 0);
   color: rgb(243, 244, 246);
 }
 
 [data-theme="dark"] #navbar {
-  background: rgba(17, 24, 39, 0.9);
-  border-bottom-color: rgb(55, 65, 81);
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom-color: rgb(38, 38, 38);
 }
 
 [data-theme="dark"] .bg-white {
-  background-color: rgb(31, 41, 55) !important;
+  background-color: rgb(23, 23, 23) !important;
 }
 
 [data-theme="dark"] .bg-gray-50 {
-  background-color: rgb(17, 24, 39) !important;
+  background-color: rgb(0, 0, 0) !important;
 }
 
 [data-theme="dark"] .text-gray-900 {
@@ -92,12 +105,16 @@ body {
   color: rgb(107, 114, 128) !important;
 }
 
+[data-theme="dark"] .text-gray-700 {
+  color: rgb(209, 213, 219) !important;
+}
+
 [data-theme="dark"] .border-gray-200 {
-  border-color: rgb(55, 65, 81) !important;
+  border-color: rgb(38, 38, 38) !important;
 }
 
 [data-theme="dark"] .bg-gray-100 {
-  background-color: rgb(55, 65, 81) !important;
+  background-color: rgb(38, 38, 38) !important;
 }
 
 [data-theme="dark"] .text-gray-800 {
@@ -109,7 +126,7 @@ body {
 }
 
 [data-theme="dark"] .text-white {
-  color: rgb(17, 24, 39) !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 [data-theme="dark"] .hover\:bg-gray-800:hover {
@@ -117,7 +134,15 @@ body {
 }
 
 [data-theme="dark"] .hover\:bg-gray-50:hover {
-  background-color: rgb(55, 65, 81) !important;
+  background-color: rgb(38, 38, 38) !important;
+}
+
+[data-theme="dark"] .group:hover .group-hover\:bg-gray-900 {
+  background-color: rgb(243, 244, 246) !important;
+}
+
+[data-theme="dark"] .group:hover .group-hover\:text-white {
+  color: rgb(0, 0, 0) !important;
 }
 
 /* Animation Styles */
@@ -160,7 +185,7 @@ body {
 }
 
 [data-theme="dark"] ::-webkit-scrollbar-track {
-  background: rgb(31, 41, 55);
+  background: rgb(23, 23, 23);
 }
 
 [data-theme="dark"] ::-webkit-scrollbar-thumb {
