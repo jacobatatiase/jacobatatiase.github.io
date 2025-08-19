@@ -1,166 +1,3 @@
-// Language Management
-class LanguageManager {
-    constructor() {
-        this.currentLanguage = localStorage.getItem('language') || 'en';
-        this.languageData = {};
-        this.languageToggle = document.getElementById('language-toggle');
-        this.currentLanguageIcon = document.getElementById('current-language');
-        this.mobileCurrentLanguageIcon = document.getElementById('mobile-current-language');
-        this.mobileLanguageToggle = document.getElementById('mobile-language-toggle');
-        this.languageDropdown = document.getElementById('language-dropdown');
-        this.languageOptions = document.querySelectorAll('.language-option');
-        this.flagMap = {
-            'en': '🇬🇧',
-            'sv': '🇸🇪', 
-            'de': '🇩🇪',
-            'it': '🇮🇹'
-        };
-        this.init();
-    }
-
-    async init() {
-        await this.loadLanguageData(this.currentLanguage);
-        this.applyLanguage(this.currentLanguage);
-        this.updateLanguageIcon();
-        this.bindEvents();
-    }
-
-    async loadLanguageData(language) {
-        if (!this.languageData[language]) {
-            try {
-                const response = await fetch(`${language}.json`);
-                this.languageData[language] = await response.json();
-            } catch (error) {
-                console.error(`Error loading language ${language}:`, error);
-                // Fallback to English if language fails to load
-                if (language !== 'en') {
-                    await this.loadLanguageData('en');
-                }
-            }
-        }
-    }
-
-    bindEvents() {
-        // Desktop language toggle
-        if (this.languageToggle) {
-            this.languageToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                this.toggleLanguageDropdown();
-            });
-        }
-
-        // Mobile language toggle
-        if (this.mobileLanguageToggle) {
-            this.mobileLanguageToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                this.showMobileLanguageOptions();
-            });
-        }
-
-        // Language options
-        this.languageOptions.forEach(option => {
-            option.addEventListener('click', async (e) => {
-                e.preventDefault();
-                const selectedLanguage = e.target.getAttribute('data-lang');
-                await this.switchLanguage(selectedLanguage);
-                this.closeLanguageDropdown();
-            });
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', () => {
-            this.closeLanguageDropdown();
-        });
-    }
-
-    toggleLanguageDropdown() {
-        if (this.languageDropdown) {
-            this.languageDropdown.classList.toggle('show');
-            this.languageDropdown.classList.toggle('hidden');
-        }
-    }
-
-    closeLanguageDropdown() {
-        if (this.languageDropdown) {
-            this.languageDropdown.classList.add('hidden');
-            this.languageDropdown.classList.remove('show');
-        }
-    }
-
-    showMobileLanguageOptions() {
-        // For mobile, we'll cycle through languages
-        const languages = ['en', 'de', 'it', 'sv'];
-        const currentIndex = languages.indexOf(this.currentLanguage);
-        const nextIndex = (currentIndex + 1) % languages.length;
-        const nextLanguage = languages[nextIndex];
-        this.switchLanguage(nextLanguage);
-    }
-
-    async switchLanguage(language) {
-        await this.loadLanguageData(language);
-        this.currentLanguage = language;
-        this.applyLanguage(language);
-        this.updateLanguageIcon();
-        localStorage.setItem('language', language);
-    }
-
-    applyLanguage(language) {
-        const data = this.languageData[language];
-        if (!data) return;
-
-        // Update all elements with data-i18n attributes
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            const translation = this.getNestedValue(data, key);
-            if (translation) {
-                element.textContent = translation;
-            }
-        });
-
-        // Update title attributes
-        document.querySelectorAll('[data-i18n-title]').forEach(element => {
-            const key = element.getAttribute('data-i18n-title');
-            const translation = this.getNestedValue(data, key);
-            if (translation) {
-                element.setAttribute('title', translation);
-            }
-        });
-
-        // Update placeholder attributes
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-            const key = element.getAttribute('data-i18n-placeholder');
-            const translation = this.getNestedValue(data, key);
-            if (translation) {
-                element.setAttribute('placeholder', translation);
-            }
-        });
-
-        // Update form language field
-        const languageField = document.getElementById('form-language');
-        if (languageField) {
-            languageField.value = language;
-        }
-
-        // Update HTML lang attribute
-        document.documentElement.setAttribute('lang', language);
-    }
-
-    getNestedValue(obj, path) {
-        return path.split('.').reduce((current, key) => {
-            return current && current[key] !== undefined ? current[key] : null;
-        }, obj);
-    }
-
-    updateLanguageIcon() {
-        const flag = this.flagMap[this.currentLanguage] || '🌐';
-        if (this.currentLanguageIcon) {
-            this.currentLanguageIcon.textContent = flag;
-        }
-        if (this.mobileCurrentLanguageIcon) {
-            this.mobileCurrentLanguageIcon.textContent = flag;
-        }
-    }
-}
 
 // Theme Management
 class ThemeManager {
@@ -285,8 +122,6 @@ class FormManager {
         const formData = new FormData(this.contactForm);
         const data = Object.fromEntries(formData);
         
-        // Update language field before submission
-        this.updateLanguageField();
         
         // Simple validation
         if (!this.validateForm(data)) {
@@ -296,8 +131,7 @@ class FormManager {
         // Show loading state
         const submitBtn = this.contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-        const sendingText = this.getTranslatedErrorMessage('contact.form.sending') || 'Sending...';
-        submitBtn.textContent = sendingText;
+        submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
         try {
@@ -328,13 +162,6 @@ class FormManager {
         }
     }
 
-    updateLanguageField() {
-        const languageField = document.getElementById('form-language');
-        if (languageField) {
-            const currentLanguage = localStorage.getItem('language') || 'en';
-            languageField.value = currentLanguage;
-        }
-    }
 
     handleFormspreeErrors(errorData) {
         if (errorData.errors) {
@@ -357,63 +184,27 @@ class FormManager {
 
         for (const field of requiredFields) {
             if (!data[field] || data[field].trim() === '') {
-                const errorMessage = this.getTranslatedErrorMessage('contact.form.error_required', field);
-                this.showError(`${field.charAt(0).toUpperCase() + field.slice(1)}${errorMessage}`);
+                this.showError(`${field.charAt(0).toUpperCase() + field.slice(1)} is required`);
                 return false;
             }
         }
 
         if (!emailRegex.test(data.email)) {
-            const emailErrorMessage = this.getTranslatedErrorMessage('contact.form.error_email');
-            this.showError(emailErrorMessage);
+            this.showError('Please enter a valid email address');
             return false;
         }
 
         return true;
     }
 
-    getTranslatedErrorMessage(key, field = '') {
-        const currentLanguage = localStorage.getItem('language') || 'en';
-        
-        // Try to get translated message
-        if (window.languageManager && window.languageManager.languageData[currentLanguage]) {
-            const translated = window.languageManager.getNestedValue(
-                window.languageManager.languageData[currentLanguage], 
-                key
-            );
-            if (translated) return translated;
-        }
-        
-        // Fallback messages
-        const fallbacks = {
-            'contact.form.error_required': ' is required',
-            'contact.form.error_email': 'Please enter a valid email address',
-            'contact.form.sending': 'Sending...'
-        };
-        
-        return fallbacks[key] || 'Error occurred';
-    }
 
     showSuccess() {
         const alert = document.createElement('div');
         alert.className = 'alert alert-success fixed top-4 right-4 w-auto z-50';
         
-        // Get current language for success message
-        const currentLanguage = localStorage.getItem('language') || 'en';
-        let successMessage = 'Message sent successfully! We\'ll get back to you soon.';
-        
-        // Try to get translated message
-        if (window.languageManager && window.languageManager.languageData[currentLanguage]) {
-            const translated = window.languageManager.getNestedValue(
-                window.languageManager.languageData[currentLanguage], 
-                'contact.form.success'
-            );
-            if (translated) successMessage = translated;
-        }
-        
         alert.innerHTML = `
             <i class="fas fa-check-circle"></i>
-            <span>${successMessage}</span>
+            <span>Message sent successfully! We'll get back to you soon.</span>
         `;
         document.body.appendChild(alert);
         
@@ -606,8 +397,6 @@ class NavbarScrollManager {
 
 // Initialize all managers when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize language manager first and make it globally available
-    window.languageManager = new LanguageManager();
     new ThemeManager();
     new NavigationManager();
     new AnimationManager();
