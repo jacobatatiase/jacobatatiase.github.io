@@ -2,6 +2,7 @@
 // Theme Management
 class ThemeManager {
     constructor() {
+        // Always default to dark mode, ignore system preferences
         this.currentTheme = localStorage.getItem('theme') || 'dark';
         this.themeToggle = document.getElementById('theme-toggle');
         this.themeIcon = document.getElementById('theme-icon');
